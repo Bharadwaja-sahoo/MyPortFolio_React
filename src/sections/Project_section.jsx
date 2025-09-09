@@ -1,29 +1,50 @@
 import React, { useEffect, useState, useRef } from "react";
 
+// ✅ Import all images from src
+import dentalCareImg from "../assets/Images/projects/Dental Care.png";
+import travelWebImg from "../assets/Images/projects/Travel site.png";
+import retroSiteImg from "../assets/Images/projects/Retro site.png";
+import portfolioImg from "../assets/Images/projects/Portfolio.png";
+import myWorkshopImg from "../assets/Images/projects/My Workshop.png";
+import animatedSiteImg from "../assets/Images/projects/Animated site.png";
+import coffeeShopImg from "../assets/Images/projects/Coffee Shop.png";
+import nikeSiteImg from "../assets/Images/projects/nike site.png";
+import gymSiteImg from "../assets/Images/projects/Gym Site.png";
+import hospitalSiteImg from "../assets/Images/projects/Hospital Site.png";
+import medicalSiteImg from "../assets/Images/projects/medical site.png";
+import shoppingKaroImg from "../assets/Images/projects/shopping karo.com.png";
+import foodSiteImg from "../assets/Images/projects/food site.png";
+import burgerSiteImg from "../assets/Images/projects/burger site.png";
+import imageGenImg from "../assets/Images/projects/image generator.png";
+import ageCalculatorImg from "../assets/Images/projects/age calculator.png";
+import bubbleGameImg from "../assets/Images/projects/Bubble Game.png";
+import digitalClockImg from "../assets/Images/projects/Digital time.png";
+import clockImg from "../assets/Images/projects/time.png";
+
 const Project_section = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const cardsRef = useRef([]);
 
   const projects = [
-    { img: "src/assets/images/projects/Dental Care.png", title: "Dento Care", link: "https://bharadwaja-sahoo.github.io/Dental-site/" },
-    { img: "src/assets/images/projects/Travel site.png", title: "Travel Web", link: "https://bharadwaja-sahoo.github.io/Travel-web/" },
-    { img: "src/assets/images/projects/Retro site.png", title: "Retro site", link: "https://bharadwaja-sahoo.github.io/Retro-site/" },
-    { img: "src/assets/images/projects/Portfolio.png", title: "My Portfolio", link: "https://bharadwaja-sahoo.github.io/MyPortfolio/" },
-    { img: "src/assets/images/projects/My Workshop.png", title: "My Workshop", link: "https://bharadwaja-sahoo.github.io/MyWorkShop/" },
-    { img: "src/assets/images/projects/Animated site.png", title: "Animated Website", link: "https://bharadwaja-sahoo.github.io/Animated-website/" },
-    { img: "src/assets/images/projects/Coffee Shop.png", title: "Coffee Shop", link: "https://bharadwaja-sahoo.github.io/coffeeSHOP/" },
-    { img: "src/assets/images/projects/nike site.png", title: "Nike Redesign", link: "https://bharadwaja-sahoo.github.io/Nike-landing-page/" },
-    { img: "src/assets/images/projects/Gym Site.png", title: "Gym Web", link: "https://bharadwaja-sahoo.github.io/Gym-Website/" },
-    { img: "src/assets/images/projects/Hospital Site.png", title: "Hospital Web", link: "https://bharadwaja-sahoo.github.io/Hospital-website/" },
-    { img: "src/assets/images/projects/medical site.png", title: "Medical Web", link: "https://bharadwaja-sahoo.github.io/Medical-site/" },
-    { img: "src/assets/images/projects/shopping karo.com.png", title: "shoppingkaro.com", link: "https://bharadwaja-sahoo.github.io/shoppingKaro.com/" },
-    { img: "src/assets/images/projects/food site.png", title: "Food Web", link: "https://bharadwaja-sahoo.github.io/food-Website/" },
-    { img: "src/assets/images/projects/burger site.png", title: "Burger Web", link: "https://bharadwaja-sahoo.github.io/FoodWeb/" },
-    { img: "src/assets/images/projects/image generator.png", title: "Ai Image generate", link: "https://bharadwaja-sahoo.github.io/AI-Image-Creator/" },
-    { img: "src/assets/images/projects/age calculator.png", title: "Age Calculator", link: "https://bharadwaja-sahoo.github.io/Age-calculator/" },
-    { img: "src/assets/images/projects/Bubble Game.png", title: "Bubble game", link: "https://bharadwaja-sahoo.github.io/Bubbles-Game/" },
-    { img: "src/assets/images/projects/Digital time.png", title: "Digital Clock", link: "https://bharadwaja-sahoo.github.io/DigitalClockWithMonth/" },
-    { img: "src/assets/images/projects/time.png", title: "Clock", link: "https://bharadwaja-sahoo.github.io/DigitalClock/" },
+    { img: dentalCareImg, title: "Dento Care", link: "https://bharadwaja-sahoo.github.io/Dental-site/" },
+    { img: travelWebImg, title: "Travel Web", link: "https://bharadwaja-sahoo.github.io/Travel-web/" },
+    { img: retroSiteImg, title: "Retro site", link: "https://bharadwaja-sahoo.github.io/Retro-site/" },
+    { img: portfolioImg, title: "My Portfolio", link: "https://bharadwaja-sahoo.github.io/MyPortfolio/" },
+    { img: myWorkshopImg, title: "My Workshop", link: "https://bharadwaja-sahoo.github.io/MyWorkShop/" },
+    { img: animatedSiteImg, title: "Animated Website", link: "https://bharadwaja-sahoo.github.io/Animated-website/" },
+    { img: coffeeShopImg, title: "Coffee Shop", link: "https://bharadwaja-sahoo.github.io/coffeeSHOP/" },
+    { img: nikeSiteImg, title: "Nike Redesign", link: "https://bharadwaja-sahoo.github.io/Nike-landing-page/" },
+    { img: gymSiteImg, title: "Gym Web", link: "https://bharadwaja-sahoo.github.io/Gym-Website/" },
+    { img: hospitalSiteImg, title: "Hospital Web", link: "https://bharadwaja-sahoo.github.io/Hospital-website/" },
+    { img: medicalSiteImg, title: "Medical Web", link: "https://bharadwaja-sahoo.github.io/Medical-site/" },
+    { img: shoppingKaroImg, title: "shoppingkaro.com", link: "https://bharadwaja-sahoo.github.io/shoppingKaro.com/" },
+    { img: foodSiteImg, title: "Food Web", link: "https://bharadwaja-sahoo.github.io/food-Website/" },
+    { img: burgerSiteImg, title: "Burger Web", link: "https://bharadwaja-sahoo.github.io/FoodWeb/" },
+    { img: imageGenImg, title: "Ai Image generate", link: "https://bharadwaja-sahoo.github.io/AI-Image-Creator/" },
+    { img: ageCalculatorImg, title: "Age Calculator", link: "https://bharadwaja-sahoo.github.io/Age-calculator/" },
+    { img: bubbleGameImg, title: "Bubble game", link: "https://bharadwaja-sahoo.github.io/Bubbles-Game/" },
+    { img: digitalClockImg, title: "Digital Clock", link: "https://bharadwaja-sahoo.github.io/DigitalClockWithMonth/" },
+    { img: clockImg, title: "Clock", link: "https://bharadwaja-sahoo.github.io/DigitalClock/" },
   ];
 
   const totalCards = projects.length;

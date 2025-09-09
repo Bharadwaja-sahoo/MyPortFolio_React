@@ -1,6 +1,9 @@
 import React , { useEffect } from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import img1 from "../assets/Images/resume/row-3.jpg";
+import img2 from "../assets/Images/resume/row-3.jpg";
+import img3 from "../assets/Images/resume/row-3.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,13 +48,13 @@ const Resume_Section = () => {
           {/* resume start */}
         <div className="resume d-flex align-items-center justify-content-center flex-column" style={{ gap: "0px !important" }}>
           <div id="imgOne" className="img">
-            <img src="src/assets/Images/resume/row-1.jpg" alt="row-1" />
+            <img src={img1} alt="row-1" />
           </div>
           <div id="imgTwo" className="img">
-            <img src="src/assets/Images/resume/row-2.jpg" alt="row-2" />
+            <img src={img2} alt="row-2" />
           </div>
           <div id="imgThree" className="img">
-            <img src="src/assets/Images/resume/row-3.jpg" alt="row-3" />
+            <img src={img3} alt="row-3" />
           </div>
         </div>
         {/* resume end */}

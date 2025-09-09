@@ -1,8 +1,8 @@
 import React , { useEffect } from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import img1 from "../assets/Images/resume/row-3.jpg";
-import img2 from "../assets/Images/resume/row-3.jpg";
+import img1 from "../assets/Images/resume/row-1.jpg";
+import img2 from "../assets/Images/resume/row-2.jpg";
 import img3 from "../assets/Images/resume/row-3.jpg";
 
 gsap.registerPlugin(ScrollTrigger);

@@ -83,7 +83,7 @@ const Home = () => {
             <div className="home-div col-md-6 col-sm-12 d-flex align-items-center justify-content-end">
               <div id="imgdiv" data-aos="fade-up">
                 <div id="img1" className="img-div">
-                  <img src="src/assets/Images/1.jpg" alt="1" />
+                  <img src="../assets/Images/1.jpg" alt="1" />
                 </div>
                 <div id="img2" className="img-div">
                   <img src="src/assets/Images/2.jpg" alt="2" />

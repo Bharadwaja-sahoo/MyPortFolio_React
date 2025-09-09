@@ -1,4 +1,5 @@
 import React from 'react'
+import img1 from "../assets/Images/company.png";
 
 const WorkExperience_Section = () => {
   return (
@@ -15,7 +16,7 @@ const WorkExperience_Section = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="src/assets/Images/company.png" alt="Compugraph Softtech Solution" />
+                <img src={img1} alt="Compugraph Softtech Solution" />
               </a>
             </div>
             <div className="linediv">
@@ -34,7 +35,7 @@ const WorkExperience_Section = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="src/assets/Images/company.png" alt="Compugraph Softtech Solution" />
+                <img src={img1} alt="Compugraph Softtech Solution" />
               </a>
             </div>
             <div className="linediv">

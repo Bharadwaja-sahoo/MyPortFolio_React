@@ -12,6 +12,11 @@ import About_Section from "../sections/About_Section";
 import WorkExperience_Section from "../sections/WorkExperience_Section";
 import Lets_Connect from "../sections/Lets_Connect";
 import { Helmet } from "react-helmet";
+import img1 from "../assets/Images/1.jpg";
+import img2 from "../assets/Images/2.jpg";
+import img3 from "../assets/Images/3.jpg";
+import img4 from "../assets/Images/4.jpg";
+import resumePDF from "../assets/Images/BHARADWAJA_Resume.pdf";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -72,7 +77,7 @@ const Home = () => {
                   <i className="font-with-icon fa-brands fa-github pe-1"></i> GitHub
                 </button>
                 <button className="btns ms-3" id="links2"
-                  onClick={() => window.open("src/assets/Images/BHARADWAJA_Resume.pdf", "_self")}
+                  onClick={() => window.open(resumePDF, "_self")}
                 >
                   <i className="font-with-icon fa-regular fa-file pe-1"></i> View CV
                 </button>
@@ -83,16 +88,16 @@ const Home = () => {
             <div className="home-div col-md-6 col-sm-12 d-flex align-items-center justify-content-end">
               <div id="imgdiv" data-aos="fade-up">
                 <div id="img1" className="img-div">
-                  <img src="../assets/Images/1.jpg" alt="1" />
+                  <img src={img1} alt="1" />
                 </div>
                 <div id="img2" className="img-div">
-                  <img src="src/assets/Images/2.jpg" alt="2" />
+                  <img src={img2} alt="2" />
                 </div>
                 <div id="img3" className="img-div">
-                  <img src="src/assets/Images/3.jpg" alt="3" />
+                  <img src={img3} alt="3" />
                 </div>
                 <div id="img4" className="img-div">
-                  <img src="src/assets/Images/4.jpg" alt="4" />
+                  <img src={img4} alt="4" />
                 </div>
               </div>
             </div>

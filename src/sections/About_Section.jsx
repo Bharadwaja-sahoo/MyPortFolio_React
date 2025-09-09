@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import ProfileImg from "../assets/Images/profile.jpg";
 
 const About_Section = () => {
   return (
@@ -13,7 +14,7 @@ const About_Section = () => {
               data-aos="fade-right"
             >
               <div className="about-img">
-                <img src="src/assets/Images/profile.jpg" alt="Profile" />
+                <img src={ProfileImg} alt="Profile" />
               </div>
             </div>
 

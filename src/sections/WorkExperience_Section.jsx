@@ -22,9 +22,9 @@ const WorkExperience_Section = () => {
             <div className="linediv">
               <h1>Compugraph Softtech Solution PVT. LTD, BBSR, Odisha</h1>
             </div>
-            <pre>
-              Internship On UI Designer{"\n"}/ 2024 JUN - 2025 JAN
-            </pre>
+            <p>
+              Internship On UI Designer <br /> / 2024 JUN - 2025 JAN
+            </p>
           </div>
         </div>
         <div className="container mt-5 mb-5" data-aos="fade-up">
@@ -41,9 +41,9 @@ const WorkExperience_Section = () => {
             <div className="linediv">
               <h1>Compugraph Softtech Solution PVT. LTD, BBSR, Odisha</h1>
             </div>
-            <pre>
-              UI Designer{"\n"}/ 2025 JUL - CONTINUE...
-            </pre>
+            <p>
+              UI Designer <br /> / 2025 JUL - CONTINUE...
+            </p>
           </div>
         </div>
         {/* Work Experience end */}

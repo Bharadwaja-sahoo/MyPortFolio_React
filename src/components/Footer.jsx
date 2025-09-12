@@ -18,7 +18,7 @@ const Footer = () => {
                     <h2>Bharadwaja Sahoo</h2>
                   </div>
                 </li>
-                <li className="copyright list-unstyled text_rev text-center">
+                <li className="copyright list-unstyled text_rev">
                   © 2024-2025 All Rights Reserved. <br />
                   Designed by <span className="fw-bold">Bharadwaja Sahoo</span>
                 </li>
@@ -130,7 +130,7 @@ const Footer = () => {
                   <li>
                     <a
                       className="align-items-center d-flex justify-content-center me-2 text-decoration-none hero_text social_icon"
-                      href="https://www.linkedin.com/in/bharadwaja-sahoo-361369257/"
+                      href="https://www.linkedin.com/in/bharadwaja-s-361369257/"
                       rel="nofollow"
                       title="Linkedin"
                       target="_blank"

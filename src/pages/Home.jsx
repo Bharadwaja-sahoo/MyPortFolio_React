@@ -17,7 +17,7 @@ import img2 from "../assets/Images/2.jpg";
 import img3 from "../assets/Images/3.jpg";
 import img4 from "../assets/Images/4.jpg";
 import resumePDF from "../assets/Images/BHARADWAJA_Resume.pdf";
-
+import Dibba100px from '../components/Dibba100px';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,7 +85,7 @@ const Home = () => {
             </div>
 
             {/* Right images section */}
-            <div className="home-div col-md-6 col-sm-12 d-flex align-items-center justify-content-end">
+            <div className="home-div col-md-6 col-sm-12 d-flex align-items-center">
               <div id="imgdiv" data-aos="fade-up">
                 <div id="img1" className="img-div">
                   <img src={img1} alt="1" />
@@ -107,6 +107,7 @@ const Home = () => {
       {/* Home end */}
       <Intro_Section />
       <About_Section />
+      <Dibba100px />
       <WorkExperience_Section />
       <Skill_Section />
       <Project_section />

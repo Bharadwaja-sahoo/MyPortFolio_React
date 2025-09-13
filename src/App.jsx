@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import Loader from './components/Loader.jsx';
 import Home from './pages/Home.jsx';
@@ -8,28 +8,23 @@ import Projects from './pages/Projects.jsx';
 import Contact from './pages/Contact.jsx';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const handleLoad = () => setLoading(false);
+    // Simulate content loading (e.g., fetching data, loading assets)
+    const loadContent = async () => {
+      // You can replace this with actual logic to check if content (e.g., images, API data) is loaded
+      await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulated 2-second delay
+      setIsLoading(false);
+    };
 
-    // Check if page already fully loaded (e.g. from cache)
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
-    }
+    loadContent();
   }, []);
-
-  if (loading) {
-    return <Loader />; // ✅ Show loader until everything loads
-  }
-
-  if (loading) return <Loader />;
-
   return (
     <>
+    {isLoading ? (
+        <Loader />
+      ) : (
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -37,6 +32,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
       </Routes>
+      )}
     </>
   );
 }

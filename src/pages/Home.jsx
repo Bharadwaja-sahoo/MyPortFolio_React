@@ -16,7 +16,7 @@ import img3 from "../assets/Images/3.jpg";
 import img4 from "../assets/Images/4.jpg";
 import resumePDF from "../assets/Images/BHARADWAJA_Resume.pdf";
 import Dibba100px from '../components/Dibba100px';
-import Timeline from "../components/Timeline";
+import Timeline from "../sections/Timeline";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -48,6 +48,7 @@ const Navbar = () => {
 
       var timelinentry = document.querySelectorAll('.timeline-entry');
       var timelinesvg = document.querySelectorAll('.timeline-entry svg');
+      var timelineyear = document.querySelectorAll('.timeline-entry .svg p');
 
       if (icon.classList.contains("ri-moon-fill")) {
         icon.classList.replace("ri-moon-fill", "ri-sun-fill");
@@ -88,12 +89,7 @@ const Navbar = () => {
         card_button.forEach(link => {
           link.style.color = "var(--white)";
           link.style.border = "2px solid var(--white)";
-        });
-        about_img.style.border = "5px solid var(--dark)";
-        about_img.style.boxShadow = "0px 0px 30px var(--dark)";
-        buttons.style.backgroundColor = "var(--dark)";
-        buttons.style.color = "var(--white)";
-        line.forEach(link => link.style.backgroundColor = "#00000013");
+        });        
 
         document.documentElement.style.setProperty("--timeline-before-color", "var(--dark)");
         document.documentElement.style.setProperty("--timeline-after-color", "var(--white)");
@@ -106,6 +102,18 @@ const Navbar = () => {
         timelinesvg.forEach(link => {
           link.style.color = "var(--white)";
         });
+        timelineyear.forEach(link => {
+          link.style.color = "var(--white)";
+        });
+        if (about_img) {
+          about_img.style.border = "5px solid var(--dark)";
+          about_img.style.boxShadow = "0px 0px 30px var(--dark)";
+        }
+        if (buttons) {
+          buttons.style.backgroundColor = "var(--dark)";
+          buttons.style.color = "var(--white)";
+        }
+        line.forEach(link => link.style.backgroundColor = "#00000013");
 
       } else {
         icon.classList.replace("ri-sun-fill", "ri-moon-fill");
@@ -147,11 +155,6 @@ const Navbar = () => {
           link.style.color = "var(--dark)";
           link.style.border = "2px solid var(--dark)";
         });
-        about_img.style.border = "5px solid var(--white)";
-        about_img.style.boxShadow = "0px 0px 30px var(--white)";
-        buttons.style.backgroundColor = "var(--white)";
-        buttons.style.color = "var(--dark)";
-        line.forEach(link => link.style.backgroundColor = "#ffffff13");
 
         document.documentElement.style.setProperty("--timeline-before-color", "var(--white)");
         document.documentElement.style.setProperty("--timeline-after-color", "var(--dark)");
@@ -164,6 +167,18 @@ const Navbar = () => {
         timelinesvg.forEach(link => {
           link.style.color = "var(--dark)";
         });
+        timelineyear.forEach(link => {
+          link.style.color = "var(--dark)";
+        });
+        if (about_img) {
+          about_img.style.border = "5px solid var(--white)";
+          about_img.style.boxShadow = "0px 0px 30px var(--white)";
+        }
+        if (buttons) {
+          buttons.style.backgroundColor = "var(--white)";
+          buttons.style.color = "var(--dark)";
+        }
+        line.forEach(link => link.style.backgroundColor = "#ffffff13");
       }
     };
 

@@ -12,6 +12,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.1",
     "@studio-freight/lenis": "^1.0.42",
+    "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
     "gsap": "^3.13.0",

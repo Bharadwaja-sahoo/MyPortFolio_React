@@ -6,10 +6,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Skill_Section from "../sections/Skill_Section";
 import Project_section from "../sections/Project_section";
-import Resume_Section from "../sections/Resume_Section";
 import Intro_Section from "../sections/Intro_Section";
 import About_Section from "../sections/About_Section";
-import WorkExperience_Section from "../sections/WorkExperience_Section";
 import Lets_Connect from "../sections/Lets_Connect";
 import { Helmet } from "react-helmet";
 import img1 from "../assets/Images/1.jpg";
@@ -18,6 +16,7 @@ import img3 from "../assets/Images/3.jpg";
 import img4 from "../assets/Images/4.jpg";
 import resumePDF from "../assets/Images/BHARADWAJA_Resume.pdf";
 import Dibba100px from '../components/Dibba100px';
+import Timeline from "../components/Timeline";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -107,11 +106,11 @@ const Home = () => {
       {/* Home end */}
       <Intro_Section />
       <About_Section />
-      <Dibba100px />
-      <WorkExperience_Section />
+      {/* <Dibba100px /> */}
+      {/* <WorkExperience_Section /> */}
+      <Timeline />
       <Skill_Section />
       <Project_section />
-      <Resume_Section />
       <Lets_Connect />
       <Footer />
     </main>

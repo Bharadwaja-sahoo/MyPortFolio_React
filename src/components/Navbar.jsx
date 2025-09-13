@@ -46,6 +46,9 @@ const Navbar = () => {
       var card_button = document.querySelectorAll(".card-button");
       var line = document.querySelectorAll(".line");
 
+      var timelinentry = document.querySelectorAll('.timeline-entry');
+      var timelinesvg = document.querySelectorAll('.timeline-entry svg');
+
       if (icon.classList.contains("ri-moon-fill")) {
         icon.classList.replace("ri-moon-fill", "ri-sun-fill");
 
@@ -91,6 +94,19 @@ const Navbar = () => {
         buttons.style.backgroundColor = "var(--dark)";
         buttons.style.color = "var(--white)";
         line.forEach(link => link.style.backgroundColor = "#00000013");
+
+        document.documentElement.style.setProperty("--timeline-before-color", "var(--dark)");
+        document.documentElement.style.setProperty("--timeline-after-color", "var(--white)");
+        document.documentElement.style.setProperty("--timeline-after-border", "var(--dark)");
+        timelinentry.forEach(link => {
+          link.style.backgroundColor = "var(--dark)";
+          link.style.color = "var(--white)";
+          link.style.boxShadow = "0px 15px 100px -20px #232946";
+        });
+        timelinesvg.forEach(link => {
+          link.style.color = "var(--white)";
+        });
+
       } else {
         icon.classList.replace("ri-sun-fill", "ri-moon-fill");
 
@@ -136,6 +152,18 @@ const Navbar = () => {
         buttons.style.backgroundColor = "var(--white)";
         buttons.style.color = "var(--dark)";
         line.forEach(link => link.style.backgroundColor = "#ffffff13");
+
+        document.documentElement.style.setProperty("--timeline-before-color", "var(--white)");
+        document.documentElement.style.setProperty("--timeline-after-color", "var(--dark)");
+        document.documentElement.style.setProperty("--timeline-after-border", "var(--white)");
+        timelinentry.forEach(link => {
+          link.style.backgroundColor = "var(--white)";
+          link.style.color = "var(--dark)";
+          link.style.boxShadow = "0px 15px 100px -20px #8b99df";
+        });
+        timelinesvg.forEach(link => {
+          link.style.color = "var(--dark)";
+        });
       }
     };
 

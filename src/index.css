@@ -484,6 +484,7 @@ nav {
 
 .line p {
     padding-top: 20px;
+    margin-left: 275px;
 }
 
 .linediv {
@@ -711,6 +712,7 @@ body.loading {
 
     .line p {
         padding-top: 0px;
+        margin-left: 0px;
     }
 
     .linediv {

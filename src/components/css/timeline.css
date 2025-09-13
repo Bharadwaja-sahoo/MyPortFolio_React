@@ -1,0 +1,122 @@
+/* Variables */
+:root {
+  --white: #8b99df;
+  --dark: #232946;
+  --timeline-before-color: var(--white);
+  --timeline-after-color: var(--dark);
+  --timeline-after-border: var(--white);
+  --timeline-gap: 2rem;
+  --timeline-content-gap: 1.5rem;
+  --timeline-entry-padding: 2rem;
+  --timeline-title-font-size: 2rem;
+  --timeline-content-font-size: 1.2rem;
+  --timeline-circle-size: 24px;
+  --timeline-border-width: 5px;
+}
+
+#timeline-section { padding: 4rem 0; }
+
+/* The container stays positioned for the spine & markers */
+#timeline {
+  position: relative;
+}
+
+/* LIST is the flex column now (restores gap + align-self behaviour) */
+.timeline-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--timeline-gap);
+}
+
+/* centre spine uses token; sits behind markers */
+#timeline::before {
+  content: "";
+  width: var(--timeline-border-width);
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--timeline-before-color);
+  z-index: 0;
+}
+
+.timeline-entry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--timeline-content-gap);
+  box-sizing: border-box;
+  color: var(--dark);
+  padding: var(--timeline-entry-padding);
+  background: var(--white);
+  width: 45%;
+  /* box-shadow: 0px 15px 30px -25px rgba(0,0,0,0.5); */
+  box-shadow: 0px 15px 100px -20px #8b99df;
+}
+
+/* marker anchored to #timeline (intentional) */
+.timeline-entry::after {
+  content: "";
+  width: var(--timeline-circle-size);
+  height: var(--timeline-circle-size);
+  border-radius: 50%;
+  border-width: var(--timeline-border-width);
+  border-style: solid;
+  background: var(--timeline-after-color);
+  border-color: var(--timeline-after-border);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* z-index: 1;  */
+}
+
+.timeline-entry .title { font-size: var(--timeline-title-font-size); }
+.timeline-entry p { font-size: var(--timeline-content-font-size); }
+.timeline-entry svg { color: var(--dark); order: -1; }
+.timeline-entry .svg { color: var(--dark); order: -1; }
+
+/* Desktop zig-zag: even items to the right */
+@media (min-width: 768px) {
+  .timeline-list .timeline-entry:nth-child(even) {
+    align-self: flex-end;
+  }
+}
+
+/* Mobile: move spine to start and widen entries */
+@media (max-width: 767px) {
+  #timeline::before {
+    left: 0;
+    transform: none;
+  }
+  .timeline-entry {
+    width: 90%;
+    align-self: flex-end;
+  }
+  .timeline-entry::after {
+    /* left: calc(-1 * ((var(--timeline-circle-size) / 2) + (var(--timeline-border-width) / 2))); */
+    left: 1%;
+    transform: none;
+  }
+}
+
+/* Accessibility helper for the hidden heading */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.2;
+}
+p {
+  margin: 0;
+}
+.container { width: 90%; max-width: 1280px; margin: 0 auto; }
+div { box-sizing: border-box; }
+img { max-width: 100%; height: auto; }

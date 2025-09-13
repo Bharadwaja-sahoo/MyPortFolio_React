@@ -8,6 +8,14 @@ import Lets_Connect from '../sections/Lets_Connect'
 import Dibba from '../components/Dibba'
 
 function About() {
+  useEffect(() => {
+      // Simulate waiting for images/animations (or actually preload if needed)
+      const timer = setTimeout(() => {
+        window.dispatchEvent(new Event("routeContentReady"));
+      }, 500); // Short delay for mount + animations
+  
+      return () => clearTimeout(timer);
+    }, []);
   return (
     <>
       <Helmet>

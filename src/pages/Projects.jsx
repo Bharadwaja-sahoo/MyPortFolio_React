@@ -7,6 +7,14 @@ import Dibba from '../components/Dibba'
 import { Helmet } from "react-helmet-async";
 
 const Projects = () => {
+  useEffect(() => {
+      // Simulate waiting for images/animations (or actually preload if needed)
+      const timer = setTimeout(() => {
+        window.dispatchEvent(new Event("routeContentReady"));
+      }, 500); // Short delay for mount + animations
+  
+      return () => clearTimeout(timer);
+    }, []);
   return (
     <>
       <Helmet>

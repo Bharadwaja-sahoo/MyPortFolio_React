@@ -8,6 +8,14 @@ import WorkExperience_Section from '../sections/WorkExperience_Section'
 import { Helmet } from "react-helmet-async";
 
 const Skills = () => {
+  useEffect(() => {
+      // Simulate waiting for images/animations (or actually preload if needed)
+      const timer = setTimeout(() => {
+        window.dispatchEvent(new Event("routeContentReady"));
+      }, 500); // Short delay for mount + animations
+  
+      return () => clearTimeout(timer);
+    }, []);
   return (
     <>
       <Helmet>

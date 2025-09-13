@@ -37,14 +37,6 @@ const Home = () => {
       typed.destroy();
     };
   }, []);
-  useEffect(() => {
-    // Simulate waiting for images/animations (or actually preload if needed)
-    const timer = setTimeout(() => {
-      window.dispatchEvent(new Event("routeContentReady"));
-    }, 500); // Short delay for mount + animations
-
-    return () => clearTimeout(timer);
-  }, []);
   
   return (
     <main className="content">
